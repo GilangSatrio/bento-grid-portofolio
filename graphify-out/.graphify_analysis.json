@@ -1,0 +1,99 @@
+{
+  "communities": {
+    "0": [
+      "app",
+      "app_carousel",
+      "app_observer",
+      "app_projects",
+      "app_renderlang",
+      "app_renderprojects",
+      "app_rendertools",
+      "app_storedtheme",
+      "app_tools",
+      "app_translations"
+    ],
+    "1": [
+      "experience",
+      "experience_experiencedetail",
+      "experience_experienceentries",
+      "experience_experienceoptions",
+      "experience_showexperience"
+    ],
+    "2": [
+      "nav",
+      "nav_languagebutton",
+      "nav_languagelabel",
+      "nav_refreshlanguagebutton"
+    ],
+    "3": [
+      "app_auto",
+      "app_go"
+    ]
+  },
+  "cohesion": {
+    "0": 0.2,
+    "1": 0.4,
+    "2": 0.5,
+    "3": 1.0
+  },
+  "gods": [
+    {
+      "id": "app_go",
+      "label": "go()",
+      "degree": 2
+    },
+    {
+      "id": "app_auto",
+      "label": "auto()",
+      "degree": 2
+    },
+    {
+      "id": "app_tools",
+      "label": "tools",
+      "degree": 1
+    },
+    {
+      "id": "app_projects",
+      "label": "projects",
+      "degree": 1
+    },
+    {
+      "id": "app_translations",
+      "label": "translations",
+      "degree": 1
+    },
+    {
+      "id": "app_carousel",
+      "label": "carousel",
+      "degree": 1
+    },
+    {
+      "id": "app_storedtheme",
+      "label": "storedTheme",
+      "degree": 1
+    },
+    {
+      "id": "app_observer",
+      "label": "observer",
+      "degree": 1
+    },
+    {
+      "id": "experience_experienceentries",
+      "label": "experienceEntries",
+      "degree": 1
+    },
+    {
+      "id": "experience_experiencedetail",
+      "label": "experienceDetail",
+      "degree": 1
+    }
+  ],
+  "surprises": [],
+  "questions": [
+    {
+      "type": "isolated_nodes",
+      "question": "What connects `tools`, `projects`, `translations` to the rest of the system?",
+      "why": "11 weakly-connected nodes found - possible documentation gaps or missing edges."
+    }
+  ]
+}

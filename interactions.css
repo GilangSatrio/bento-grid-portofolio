@@ -1,0 +1,188 @@
+/* Consistent spacing and tactile container interaction */
+.section { padding-top: 32px; }
+.tools-section, .resume { margin-top: 32px; }
+.contact { margin: 32px 0; }
+
+/* The complete portfolio follows the same 12-column bento system as Home. */
+.intro-grid { padding-bottom: 0; }
+.portfolio-bento {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 16px;
+  padding: 0;
+  margin-top: 16px;
+  align-items: start;
+}
+.portfolio-bento > .section,
+.portfolio-bento > .tools-section,
+.portfolio-bento > .contact {
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+}
+#about { grid-column: span 5; }
+#experience { grid-column: span 7; }
+#skills { grid-column: span 7; }
+.tools-section { grid-column: span 5; height: 100%; }
+#projects { grid-column: span 12; }
+#training { grid-column: span 12; }
+#resume { grid-column: span 5; }
+#contact { grid-column: span 7; }
+
+.portfolio-bento .about-container { min-height: 100%; }
+.portfolio-bento > #about,
+.portfolio-bento > #experience { align-self: stretch; }
+.portfolio-bento > #experience .experience-panel { height: 100%; }
+.portfolio-bento .about-copy { font-size: clamp(1.15rem, 1.8vw, 1.65rem); }
+.portfolio-bento .tools-section { display: flex; flex-direction: column; justify-content: center; grid-template-columns: 1fr; gap: 18px; padding: 28px; }
+.portfolio-bento .tools-heading { display: flex; align-items: baseline; gap: 12px; }
+.portfolio-bento .tools-heading p:last-child { margin: 0; }
+.portfolio-bento .skills-grid { grid-template-columns: 1fr 1fr; }
+.portfolio-bento .skill-card:first-child { grid-column: span 2; }
+.portfolio-bento .skill-card { min-height: 164px; }
+.portfolio-bento .resume { display: block; padding: 30px; }
+.portfolio-bento .resume > div + div { margin-top: 24px; }
+.portfolio-bento .contact { gap: 30px; padding: 32px; }
+.portfolio-bento .contact-copy h2 { margin: 14px 0 25px; }
+.portfolio-bento .training-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+.portfolio-bento .training { min-height: 158px; }
+.portfolio-bento .training:last-child { grid-column: auto; }
+
+.profile-photo { width: 106px; height: 106px; border-radius: 18px; overflow: hidden; position: relative; background: linear-gradient(145deg, var(--blue), #0e254a); box-shadow: 0 0 0 7px var(--blue-soft); display: grid; place-items: center; }
+.profile-photo span { color: #fff; font: 700 28px 'DM Mono', monospace; }
+.profile-photo img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1; }
+
+.contact-links { display: grid; gap: 9px; width: 100%; }
+.contact-links a { display: flex; align-items: center; gap: 10px; width: 100%; padding: 9px 11px; border: 1px solid var(--line); border-radius: 9px; text-decoration: none; transition: transform .2s ease, border-color .2s ease, background .2s ease; }
+.contact-links a:hover { transform: translateX(3px); background: var(--blue-soft); border-color: var(--blue); }
+.contact-links b { width: 22px; height: 22px; border-radius: 6px; display: grid; place-items: center; background: var(--blue-soft); color: var(--blue); font: 700 11px Manrope, sans-serif; }
+.contact-links span { font-size: 11px; font-weight: 700; }
+.contact-links .pending-link { opacity: .7; }
+.contact-location { display: flex; align-items: center; gap: 10px; padding: 9px 11px; border: 1px solid var(--line); border-radius: 9px; color: var(--ink); font-size: 11px; font-weight: 700; }
+.contact-location b { width: 22px; height: 22px; border-radius: 6px; display: grid; place-items: center; background: var(--blue-soft); color: var(--blue); font-size: 14px; }
+
+/* Resume, contact, and footer match the compact final-row composition. */
+.portfolio-bento .resume { height: 466px; min-height: 466px; display: flex; flex-direction: column; }
+.resume-action { margin-top: auto; display: grid; gap: 26px; }
+.resume-file { display: flex; align-items: center; gap: 12px; padding: 12px; border: 1px solid var(--line); border-radius: 18px; background: var(--surface-hi); }
+.resume-file > b { width: 49px; height: 49px; display: grid; place-items: center; border-radius: 11px; background: var(--blue); color: #fff; font: 700 10px 'DM Mono', monospace; }
+.resume-file strong, .resume-file small { display: block; }
+.resume-file strong { font-size: 12px; }
+.resume-file small { color: var(--muted); font-size: 10px; margin-top: 4px; }
+.resume-action .button { width: 100%; min-height: 45px; }
+.portfolio-bento .contact { height: 466px; min-height: 466px; grid-template-columns: .95fr 1.05fr; align-items: start; }
+.portfolio-bento .contact .contact-copy h2 { font-size: clamp(1.35rem, 1.65vw, 1.7rem) !important; line-height: 1.08; letter-spacing: -.045em; margin: 8px 0 12px; }
+.contact-intro { color: var(--muted); font-size: 12px; line-height: 1.45; margin: 0 0 16px; }
+.contact-links { gap: 6px; }
+.contact-links a { padding: 7px 9px; min-height: 38px; }
+.contact-links b { width: 20px; height: 20px; }
+.contact-links span { font-size: 10px; }
+.contact form { align-content: start; }
+.contact input { min-height: 45px; }
+.contact textarea { min-height: 85px; resize: vertical; }
+.contact form .button { width: 100%; min-height: 45px; margin-top: 3px; }
+
+footer { border: 0; padding: 20px 0 34px; display: block; }
+.footer-card { min-height: 94px; padding: 20px 28px; display: flex; align-items: center; justify-content: space-between; gap: 20px; border: 1px solid var(--line); border-radius: 24px; background: linear-gradient(110deg, var(--surface), var(--blue-soft)); box-shadow: var(--shadow); }
+.footer-brand { display: flex; align-items: center; gap: 11px; }
+.footer-brand > b { width: 32px; height: 32px; display: grid; place-items: center; border-radius: 50%; background: var(--blue); color: #fff; font: 700 10px 'DM Mono', monospace; }
+.footer-brand strong, .footer-brand small { display: block; }
+.footer-brand strong { font-size: 12px; }.footer-brand small, .footer-card > small { margin-top: 3px; color: var(--muted); font-size: 10px; }
+.footer-links { display: flex; gap: 20px; }.footer-links a { color: var(--muted); font-size: 11px; text-decoration: none; }.footer-links a:hover { color: var(--blue); }
+.section-label {
+  width: 100%;
+  margin-bottom: 12px;
+  padding: 20px 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: linear-gradient(135deg, var(--surface), var(--blue-soft));
+  box-shadow: 0 10px 28px rgba(12, 37, 78, .08);
+  transition: border-color .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+.section-label:hover {
+  transform: translateY(-3px);
+  border-color: color-mix(in srgb, var(--blue) 48%, var(--line));
+  box-shadow: 0 12px 30px var(--blue-soft);
+}
+.section-label h2 { font-size: 15px; }
+
+/* Navigation uses the same rounded bento-card language as the content grid. */
+.nav-wrap { padding-top: 10px; background: transparent; border: 0 !important; backdrop-filter: none; }
+.nav-wrap .nav { height: 64px; padding: 0 14px; display: grid; grid-template-columns: auto 1fr auto; gap: 16px; border: 1px solid var(--line); border-radius: 18px; background: color-mix(in srgb, var(--bg) 80%, transparent); box-shadow: 0 12px 32px rgba(8, 20, 44, .13); backdrop-filter: blur(18px); }
+.nav-wrap.scrolled .nav { border-color: color-mix(in srgb, var(--blue) 34%, var(--line)); }
+.nav-links { margin-left: 0; justify-content: center; }
+.nav-actions { justify-content: flex-end; }
+.lang-toggle { width: 58px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; padding: 0; }
+.lang-toggle svg { width: 14px; height: 14px; fill: none; stroke: currentColor; stroke-width: 1.7; }
+.lang-toggle em { display: none; }
+.lang-toggle span { color: var(--ink); font-size: 10px; }
+
+/* A section title now belongs to the same large card as its content. */
+#about.about-section { display: block; }
+.about-container .section-label,
+.experience-panel .section-label,
+.skills-section .section-label,
+.projects-section .section-label,
+.training-section .section-label {
+  width: 100%;
+  margin: 0 0 22px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+.about-container .section-label:hover,
+.experience-panel .section-label:hover,
+.skills-section .section-label:hover,
+.projects-section .section-label:hover,
+.training-section .section-label:hover { transform: none; box-shadow: none; border-color: transparent; }
+.skills-section, .training-section { padding: 28px; }
+.projects-section { padding: 28px; }
+.projects-section .section-label { padding: 0; margin-bottom: 22px; }
+.projects-section .carousel { border: 1px solid var(--line); border-radius: 16px; overflow: hidden; }
+.projects-section .placeholder-note { margin: 14px 0 0; }
+
+/* Improve readability without changing the visual hierarchy. */
+.mono { font-size: 11px; }
+.role-list span, .tags span, .about-specialties span { font-size: 11px; }
+.metric > span, .experience-snap small, .training p { font-size: 12px; }
+.placeholder-note { font-size: 12px; }
+.card, .about-container {
+  transition: transform .28s ease, border-color .28s ease, box-shadow .28s ease, background .28s ease;
+}
+.card:hover, .about-container:hover {
+  transform: translateY(-4px);
+  border-color: color-mix(in srgb, var(--blue) 48%, var(--line));
+  box-shadow: 0 24px 55px rgba(12, 37, 78, .18), 0 0 28px var(--blue-soft);
+}
+.card:hover .project-art { transform: scale(1.025); }
+.project-art { transition: transform .45s ease; }
+
+.experience-panel {
+  display: grid;
+  grid-template-columns: minmax(250px, .78fr) minmax(0, 1.45fr);
+  min-height: 340px;
+  overflow: hidden;
+}
+.experience-panel .section-label { grid-column: 1 / -1; padding: 27px 30px 0; margin-bottom: 0; }
+.experience-list { padding: 13px; border-right: 1px solid var(--line); display: grid; gap: 6px; align-content: center; }
+.experience-option { text-align: left; appearance: none; border: 1px solid transparent; border-radius: 14px; padding: 17px; background: transparent; color: var(--ink); cursor: pointer; font-family: inherit; transition: background .2s, border-color .2s, transform .2s; }
+.experience-option:hover, .experience-option.active { background: var(--blue-soft); border-color: color-mix(in srgb, var(--blue) 32%, var(--line)); transform: translateX(3px); }
+.experience-option span, .experience-option small { display: block; color: var(--muted); font: 10px 'DM Mono', monospace; letter-spacing: .04em; }
+.experience-option strong { display: block; margin: 7px 0 5px; font-size: 14px; letter-spacing: -.025em; }
+.experience-detail { padding: 42px; display: flex; flex-direction: column; justify-content: center; animation: detail-in .3s ease; }
+.experience-detail .mono { margin-bottom: 12px; }
+.experience-detail h3 { margin: 0 0 7px; font-size: clamp(1.15rem, 1.8vw, 1.5rem); letter-spacing: -.035em; }
+.experience-detail .company { color: var(--blue); font-size: 13px; font-weight: 700; margin-bottom: 25px; }
+.experience-detail ul, .experience-detail .detail-placeholder { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.75; max-width: 620px; }
+.experience-detail ul { padding-left: 18px; }
+@keyframes detail-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
+@media (max-width: 900px) {
+  .portfolio-bento { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  #about, #experience, #skills, .tools-section, #projects, #training, #resume, #contact { grid-column: span 6; }
+  .portfolio-bento .training-grid { grid-template-columns: repeat(3, 1fr); }
+  .portfolio-bento .tools-section { grid-template-columns: 1fr; }
+  .portfolio-bento .resume, .portfolio-bento .contact { height: auto; min-height: auto; }
+}
+@media (max-width: 660px) { .nav-wrap { padding-top: 7px; }.nav-wrap .nav { height: 58px; padding: 0 10px; gap: 9px; border-radius: 15px; }.section { padding-top: 26px; }.portfolio-bento { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 12px; }.portfolio-bento > .section, .portfolio-bento > .tools-section, .portfolio-bento > .contact { grid-column: auto; }.tools-section, .resume { margin-top: 0; }.contact { margin: 0; }.skills-section, .training-section { padding: 22px; }.projects-section { padding: 22px; }.projects-section .section-label { padding: 0; }.projects-section .placeholder-note { margin-left: 0; margin-right: 0; }.experience-panel { grid-template-columns: 1fr; }.experience-list { border-right: 0; border-bottom: 1px solid var(--line); padding: 9px; }.experience-option { padding: 13px; }.experience-detail { padding: 28px; min-height: 270px; }.portfolio-bento .skills-grid { grid-template-columns: 1fr; }.portfolio-bento .skill-card:first-child { grid-column: auto; }.portfolio-bento .tools-heading { display: block; }.portfolio-bento .tools-heading h2 { margin: 8px 0; }.portfolio-bento .training-grid { grid-template-columns: 1fr 1fr; }.portfolio-bento .contact { display: block; }.portfolio-bento .contact form { margin-top: 28px; }.profile-photo { width: 92px; height: 92px; }.footer-card { padding: 20px; align-items: flex-start; flex-direction: column; gap: 14px; }.footer-links { flex-wrap: wrap; gap: 12px 18px; } }
