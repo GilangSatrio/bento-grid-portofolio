@@ -16,7 +16,7 @@ function renderTools(){
   const marquee = document.getElementById('marquee');
   const makeRow = (rowIndex) => {
     const duplicated = [...tools, ...tools]; // duplicate for continuous scroll
-    return `<div class="marquee-row r${rowIndex}">${duplicated.map((t,i)=>`<span class="tool"><b>${String(i%tools.length+1).padStart(2,'0')}</b>${t}</span>`).join('')}</div>`;
+    return `<div class="marquee-row r${rowIndex}">${duplicated.map((t,i)=>`<span class="tool" tabindex="0"><b>${String(i%tools.length+1).padStart(2,'0')}</b>${t}</span>`).join('')}</div>`;
   };
   marquee.innerHTML = Array.from({length: rows}, (_,i) => makeRow(i+1)).join('');
 }
