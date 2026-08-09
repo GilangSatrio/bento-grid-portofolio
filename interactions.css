@@ -4,7 +4,10 @@
 .contact { margin: 32px 0; }
 
 /* The complete portfolio follows the same 12-column bento system as Home. */
-.intro-grid { padding-bottom: 0; }
+.intro-grid {
+  padding-bottom: 0;
+}
+
 .portfolio-bento {
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
