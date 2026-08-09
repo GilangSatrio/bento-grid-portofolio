@@ -760,9 +760,14 @@ footer {
     margin-top: 12px;
   }
 
-  .portfolio-bento>.section,
-  .portfolio-bento>.tools-section,
-  .portfolio-bento>.contact {
+  #about,
+  #experience,
+  #skills,
+  .tools-section,
+  #projects,
+  #training,
+  #resume,
+  #contact {
     grid-column: auto;
   }
 
@@ -781,6 +786,10 @@ footer {
   }
 
   .projects-section {
+    padding: 22px;
+  }
+
+  .portfolio-bento .tools-section {
     padding: 22px;
   }
 
@@ -838,6 +847,7 @@ footer {
 
   .portfolio-bento .contact form {
     margin-top: 28px;
+    grid-template-columns: 1fr;
   }
 
   .profile-photo {
