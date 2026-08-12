@@ -93,15 +93,36 @@
   padding: 28px;
 }
 
-.portfolio-bento .tools-heading {
-  display: flex;
-  align-items: baseline;
-  gap: 12px;
+/* Keep the animated rows inside the card's own content box. */
+.portfolio-bento .tools-section .marquee-mask {
+  width: 100%;
+  min-width: 0;
+  height: auto;
+  flex: 1 1 auto;
+  align-self: stretch;
+  overflow: hidden;
+  border-radius: 12px;
+  padding: 3px 0;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 7%, #000 93%, transparent 100%);
 }
 
-.portfolio-bento .tools-heading p:last-child {
-  margin: 0;
+.portfolio-bento .tools-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 18px;
 }
+
+.portfolio-bento .tools-heading .mono { margin-bottom: 6px; }
+.portfolio-bento .tools-heading h2 { font-size: 18px; }
+
+.portfolio-bento .tools-heading p:last-child {
+  margin: 6px 0 0;
+  max-width: 340px;
+}
+
+.tool-count { flex: 0 0 auto; padding: 7px 9px; border: 1px solid var(--line); border-radius: 8px; color: var(--blue); background: var(--blue-soft); font: 500 10px 'DM Mono', monospace; }
 
 .portfolio-bento .skills-grid {
   grid-template-columns: 1fr 1fr;

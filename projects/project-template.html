@@ -1,3 +1,51 @@
 <!doctype html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Project Template — Gilang Satrio</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"><link rel="stylesheet" href="../styles.css"></head>
-<body><main class="container" style="padding-top:70px;max-width:920px"><a class="button ghost" href="../index.html#projects">← Back to projects</a><section class="card" style="padding:48px;margin-top:20px;background:linear-gradient(135deg,var(--surface),var(--blue-soft))"><p class="mono">PROJECT DETAILS / TEMPLATE</p><h1 style="font-size:clamp(2.5rem,6vw,5rem);letter-spacing:-.07em;margin:20px 0 12px">Project Slot</h1><p class="lede">A dedicated, editable project-details template.</p></section><section class="section"><div class="section-label"><span>01</span><h2>Project Overview</h2></div><p class="lede">Add verified project information here before publishing. The portfolio intentionally contains no invented project details.</p></section><section class="section"><div class="section-label"><span>02</span><h2>Project Information</h2></div><div class="card" style="padding:28px"><p class="mono">AVAILABLE SECTIONS</p><div class="tags"><span>Problem</span><span>Objectives</span><span>Engineering Solution</span><span>System Architecture</span><span>Technologies</span><span>Implementation</span><span>Project Gallery</span><span>Key Features</span><span>Results</span><span>Lessons Learned</span></div><p style="color:var(--muted);font-size:13px;line-height:1.7;margin-top:25px">Populate only the sections supported by project documentation. Add related, previous, and next project links when real projects are available.</p></div></section></main></body></html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Project details — Gilang Satrio">
+  <title>Project Template — Gilang Satrio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="../interactions.css"><link rel="stylesheet" href="project-template.css">
+</head>
+<body>
+  <header class="nav-wrap"><nav class="nav container" aria-label="Primary navigation">
+    <a href="../index.html" class="brand"><span>GS</span><strong>Gilang Satrio</strong></a>
+    <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><i></i><i></i></button>
+    <div class="nav-links" id="navLinks">
+      <a href="../index.html#home" data-project-i18n="navHome">Home</a><a href="../index.html#about" data-project-i18n="navAbout">About</a><a href="../index.html#experience" data-project-i18n="navExperience">Experience</a><a href="../index.html#skills" data-project-i18n="navSkills">Skills</a><a href="../index.html#projects" data-project-i18n="navProjects">Projects</a><a href="../index.html#training" data-project-i18n="navTraining">Training</a><a href="../index.html#resume" data-project-i18n="navResume">Resume</a><a href="../index.html#contact" data-project-i18n="navContact">Contact</a>
+    </div>
+    <div class="nav-actions"><button class="lang-toggle" aria-label="Switch language" title="Switch language"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.2 2.3 3.3 5.1 3.3 8.5S14.2 18.2 12 20.5C9.8 18.2 8.7 15.4 8.7 12S9.8 5.8 12 3.5"/></svg><span>EN</span></button><button class="theme-toggle" aria-label="Toggle color theme"><span class="sun">☼</span><span class="moon">☾</span></button></div>
+  </nav></header>
+
+  <main class="container project-page">
+    <section class="project-intro card">
+      <p class="mono" data-project-i18n="templateLabel">PROJECT DETAILS / TEMPLATE</p>
+      <h1 data-project-i18n="projectSlot">Project Slot</h1>
+      <p data-project-i18n="intro">An editable project page. Add only verified project content before publishing.</p>
+    </section>
+
+    <section class="project-media card" aria-label="Project media gallery">
+      <div class="media-heading"><div><p class="mono" data-project-i18n="mediaLabel">PROJECT MEDIA</p><h2 data-project-i18n="mediaTitle">Video &amp; Photo Gallery</h2></div><div class="media-controls"><button type="button" id="mediaPrev" aria-label="Previous media">←</button><button type="button" id="mediaNext" aria-label="Next media">→</button></div></div>
+      <div class="media-viewport" id="mediaViewport" tabindex="0" aria-label="Use arrow keys to browse project media">
+        <div class="media-track" id="mediaTrack">
+          <article class="media-slide media-video"><div class="media-art"><span class="media-type">VIDEO SLOT</span><button class="play-placeholder" type="button" aria-label="Video placeholder">▶</button><p data-project-i18n="videoSlot">Replace with a project video</p></div><div class="media-caption"><strong data-project-i18n="projectVideo">Project Video</strong><span data-project-i18n="videoCaption">Replace this placeholder with a verified project video.</span></div></article>
+          <article class="media-slide media-photo-one"><div class="media-art"><span class="media-type">PHOTO 01</span><div class="grid-art"></div></div><div class="media-caption"><strong data-project-i18n="systemOverview">System Overview</strong><span data-project-i18n="systemCaption">Replace with a verified system or installation photo.</span></div></article>
+          <article class="media-slide media-photo-two"><div class="media-art"><span class="media-type">PHOTO 02</span><div class="grid-art"></div></div><div class="media-caption"><strong data-project-i18n="implementationDetail">Implementation Detail</strong><span data-project-i18n="implementationCaption">Replace with a verified testing or commissioning photo.</span></div></article>
+        </div>
+      </div>
+      <div class="media-dots" id="mediaDots" aria-label="Media pagination"></div>
+    </section>
+
+    <section class="project-content">
+      <article class="project-overview card"><p class="mono" data-project-i18n="overviewLabel">PROJECT OVERVIEW</p><h2 data-project-i18n="overviewTitle">Document the engineering story.</h2><p data-project-i18n="overviewText">Add the project context, scope, and constraints here. This template intentionally does not claim any project outcomes or technical details that have not been provided.</p></article>
+      <article class="project-details card"><p class="mono" data-project-i18n="detailsLabel">DETAILS TO ADD</p><div class="detail-list"><div><strong data-project-i18n="problem">Problem</strong><span data-project-i18n="problemText">Add the verified problem statement.</span></div><div><strong data-project-i18n="objectives">Objectives</strong><span data-project-i18n="objectivesText">Add the intended engineering objectives.</span></div><div><strong data-project-i18n="solution">Engineering Solution</strong><span data-project-i18n="solutionText">Add the approved solution narrative.</span></div><div><strong data-project-i18n="architecture">System Architecture</strong><span data-project-i18n="architectureText">Add diagrams or architecture when available.</span></div><div><strong data-project-i18n="technologies">Technologies</strong><span data-project-i18n="technologiesText">Add only tools used on this project.</span></div><div><strong data-project-i18n="results">Results &amp; Lessons</strong><span data-project-i18n="resultsText">Add measurable outcomes when documented.</span></div></div></article>
+    </section>
+    <nav class="project-pagination" aria-label="Project navigation"><a class="button ghost" href="../index.html#projects" data-project-i18n="previous">← Previous Project</a><a class="button ghost" href="../index.html#projects" data-project-i18n="next">Next Project →</a></nav>
+  </main>
+
+  <footer class="container"><div class="footer-card"><div class="footer-brand"><b>GS</b><span><strong>Gilang Satrio</strong><small>Designed &amp; engineered with precision.</small></span></div><div class="footer-links"><a href="../index.html">Home</a><a href="../index.html#projects">Projects</a><a href="https://github.com/GilangSatrio" target="_blank" rel="noreferrer">GitHub</a><a href="https://www.linkedin.com/in/gilang-satrio" target="_blank" rel="noreferrer">LinkedIn</a></div><small>© <span id="year"></span> · All rights reserved.</small></div></footer>
+  <script src="project-template.js"></script>
+</body>
+</html>

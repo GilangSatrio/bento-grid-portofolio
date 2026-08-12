@@ -477,11 +477,13 @@ p {
 
 .marquee {
     width: 100%;
+    display: grid;
+    gap: 20px;
 }
 
 .marquee-row {
     display: flex;
-    gap: 10px;
+    gap: 18px;
     align-items: center;
     white-space: nowrap;
 }
@@ -493,12 +495,12 @@ p {
 .tool {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 10px;
     min-width: 0;
-    padding: 10px 13px;
+    padding: 14px 18px;
     border: 1px solid var(--line);
-    border-radius: 10px;
-    font-size: 12px;
+    border-radius: 12px;
+    font-size: 14px;
     transition: transform .2s, box-shadow .2s;
 }
 
@@ -509,8 +511,10 @@ p {
 
 .tool b {
     color: var(--blue);
-    font: 500 10px 'DM Mono';
+    font: 500 11px 'DM Mono';
 }
+
+.marquee-mask:hover .marquee-row { animation-play-state: paused; }
 
 @keyframes scroll-left {
     from {
@@ -533,15 +537,15 @@ p {
 }
 
 .marquee-row.r1 {
-    animation: scroll-left 22s linear infinite;
+    animation: scroll-left 45s linear infinite;
 }
 
 .marquee-row.r2 {
-    animation: scroll-right 26s linear infinite;
+    animation: scroll-right 52s linear infinite;
 }
 
 .marquee-row.r3 {
-    animation: scroll-left 30s linear infinite;
+    animation: scroll-left 60s linear infinite;
 }
 
 @media(max-width:660px) {
@@ -562,7 +566,7 @@ p {
     .marquee-row.r1,
     .marquee-row.r2,
     .marquee-row.r3 {
-        animation-duration: 20s;
+        animation-duration: 40s;
     }
 }
 
