@@ -460,7 +460,7 @@ footer {
 }
 
 .section-label h2 {
-  font-size: 15px;
+  font-size: 16px;
 }
 
 /* Navigation uses the same rounded bento-card language as the content grid */
@@ -493,6 +493,9 @@ footer {
   justify-content: center;
 }
 
+.nav-links a { font-size: 13px; }
+.brand strong { font-size: 15px; }
+
 .nav-actions {
   justify-content: flex-end;
 }
@@ -520,7 +523,7 @@ footer {
 
 .lang-toggle span {
   color: var(--ink);
-  font-size: 10px;
+  font-size: 11px;
 }
 
 /* A section title now belongs to the same large card as its content */
@@ -578,19 +581,19 @@ footer {
 
 /* Readability tweaks (override base sizes from styles.css) */
 .mono {
-  font-size: 11px;
+  font-size: 12px;
 }
 
 .role-list span,
 .tags span {
-  font-size: 11px;
+  font-size: 12px;
 }
 
 /* .about-specialties span already matches (see about.css) — no need to repeat it here */
 .metric>span,
 .experience-snap small,
 .training p {
-  font-size: 12px;
+  font-size: 13px;
 }
 
 .placeholder-note {
@@ -869,6 +872,23 @@ footer {
   .portfolio-bento .contact form {
     margin-top: 28px;
     grid-template-columns: 1fr;
+    width: 100%;
+    min-width: 0;
+  }
+
+  .portfolio-bento .contact form label,
+  .portfolio-bento .contact form label:nth-of-type(3),
+  .portfolio-bento .contact form label:nth-of-type(4),
+  .portfolio-bento .contact form button,
+  .portfolio-bento .contact form .form-status {
+    grid-column: 1 / -1;
+    min-width: 0;
+  }
+
+  .portfolio-bento .contact form input,
+  .portfolio-bento .contact form textarea {
+    width: 100%;
+    max-width: 100%;
   }
 
   .profile-photo {
